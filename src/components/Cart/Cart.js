@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cart = (props) => {
     const cart = props.cart;
@@ -12,7 +13,11 @@ const Cart = (props) => {
         <div>
             <h3>Ordered Summary</h3>
             <p>Ordered Items: ${cart.length}</p>
-    <p>Total: ${total}</p>
+            <p>Total: ${total}</p>
+            <br/>
+            <Link to="/review">
+                <button className="main-button">Review Order</button>
+            </Link>
         </div>
     );
 };
